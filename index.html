@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>NYC Marathon</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/scrollama"></script>
+
+</head>
+
+<body>
+
+ <!-- PAGE 1 -->
+
+<section class="hero">
+
+<div class="bg-year">26.2</div>
+
+<div class="hero-content">
+
+<div class="top-label">
+<span class="line"></span>
+TCS NEW YORK CITY MARATHON
+<span class="line"></span>
+</div>
+
+<h1>26.2 MILES</h1>
+
+<h2>THROUGH NYC</h2>
+
+<p class="subtitle">
+50,000 RUNNERS • 1 FINISH LINE
+</p>
+
+<button class="hero-btn">
+SCROLL TO START THE JOURNEY
+</button>
+
+<div class="scroll-indicator">
+<div class="dot"></div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+    <section class="panel fun-facts">
+  <div class="facts-content">
+
+        <h2 class="facts-title-white">RACE DAY</h2>
+        <h2 class="facts-title-red">FAST FACTS</h2>
+
+        <div class="facts-divider"></div>
+
+
+
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-number">50,000+</div>
+            <div class="stat-label">RUNNERS</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number">2M+</div>
+            <div class="stat-label">SPECTATORS</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number">5</div>
+            <div class="stat-label">BOROUGHS</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number">1</div>
+            <div class="stat-label">CITY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- PAGE 3 THE ROUTE -->
+
+
+<section class="panel route-section">
+  <div class="route-layout">
+    
+    <div class="route-left">
+      <p class="route-kicker">THE ROUTE</p>
+
+      <h2 class="route-title">
+        FIVE<br />
+        BOROUGHS
+      </h2>
+
+      <p class="route-description">
+        Scroll to trace the 26.2-mile course through New York City’s five boroughs.
+      </p>
+
+      <div class="borough-list">
+        <div class="borough-item active">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">STATEN ISLAND</div>
+            <div class="borough-miles">Miles 0–1</div>
+          </div>
+        </div>
+
+        <div class="borough-item">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">BROOKLYN</div>
+            <div class="borough-miles">Miles 1–13</div>
+          </div>
+        </div>
+
+        <div class="borough-item">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">QUEENS</div>
+            <div class="borough-miles">Miles 13–16</div>
+          </div>
+        </div>
+
+        <div class="borough-item">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">THE BRONX</div>
+            <div class="borough-miles">Miles 20–21</div>
+          </div>
+        </div>
+
+        <div class="borough-item">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">MANHATTAN</div>
+            <div class="borough-miles">Miles 21–26.2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-right">
+      <img
+        src="images/nyc-marathon-map.png"
+        alt="NYC Marathon route map"
+        class="route-map-img"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- PAGE 3 THE WINNERS -->
+<section class="panel champions-section" id="champions-section">
+  <div class="champions-inner">
+    <p class="champions-kicker">FROM 1970 TO 2020</p>
+    <h2 class="champions-title">THE WINNERS</h2>
+    <p class="champions-subtitle">Hover over a year to see the winner, race time, and country.</p>
+
+    <div id="champions-viz"></div>
+    <div id="champions-tooltip" class="champions-tooltip"></div>
+  </div>
+</section>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/champions.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
