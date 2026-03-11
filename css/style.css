@@ -1,3 +1,4 @@
+/* ---------------- HOME PAGE ---------------- */
 body{
 margin:0;
 background:#050505;
@@ -6,17 +7,16 @@ color:white;
 overflow-x:hidden;
 }
 
+
 .hero{
-height:100vh;
+height:100vh; /* full height of screen */
 display:flex;
-justify-content:center;
-align-items:center;
+justify-content:center;  /* center content horizontally */
+align-items:center; /* center content vertically */
 position:relative;
 
 background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7)),
-radial-gradient(circle at center,#101010,#050505);
-
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7));
 text-align:center;
 }
 
@@ -126,6 +126,8 @@ animation:scroll 1.5s infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(-100px);
+
 }
 
 /* .facts-content {
@@ -134,21 +136,11 @@ animation:scroll 1.5s infinite;
   max-width: 1100px;
 } */
 
-.facts-top-box {
-  display: inline-block;
-  border: 1px solid #c9a227;
-  color: #c9a227;
-  font-family: 'Barlow Condensed', sans-serif;
-  letter-spacing: 0.2em;
-  font-size: 1rem;
-  padding: 0.9rem 1.8rem;
-  margin-bottom: 2rem;
-}
 
 .facts-title-white,
 .facts-title-red {
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
+  /* font-weight: 800; */
   line-height: 0.92;
   margin: 0;
   text-transform: uppercase;
@@ -156,12 +148,12 @@ animation:scroll 1.5s infinite;
 
 .facts-title-white {
   color: #f3eee7;
-  font-size: clamp(4rem, 10vw, 9rem);
+  /* font-size: clamp(4rem, 10vw, 9rem); */
 }
 
 .facts-title-red {
   color: #ff2232;
-  font-size: clamp(4rem, 10vw, 9rem);
+  /* font-size: clamp(4rem, 10vw, 9rem); */
 }
 
 .facts-divider {
@@ -433,3 +425,237 @@ animation:scroll 1.5s infinite;
 }
 
 
+
+
+
+/* ---------------- WINNING TIMES BAR RACE ---------------- */
+.winning-times-section {
+  min-height: 100vh;
+  background: #06070b;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winning-times-inner {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.winning-times-kicker {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ff2b3a;
+  letter-spacing: 0.25em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.winning-times-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #f1efe8;
+  margin: 0 0 2rem 0;
+}
+
+.slider-wrap {
+  margin-bottom: 2rem;
+}
+
+#year-slider {
+  width: 300px;
+}
+
+#selected-year {
+  margin-top: 0.75rem;
+  color: #f1efe8;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+}
+
+.division-label {
+  fill: #f1efe8;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
+.value-label {
+  fill: #f1efe8;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
+#winning-times-viz .domain,
+#winning-times-viz .tick line {
+  stroke: rgba(255,255,255,0.15);
+}
+
+#winning-times-viz .tick text {
+  fill: rgba(255,255,255,0.55);
+  font-size: 12px;
+}
+
+
+
+/* ---------------- WINNING TIMES DOTPLOT ---------------- */
+
+.dotplot-section {
+  min-height: 100vh;
+  background: #06070b;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotplot-inner {
+  width: 100%;
+  max-width: 1150px;
+  text-align: center;
+}
+
+.dotplot-kicker {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #ff2b3a;
+  letter-spacing: 0.25em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dotplot-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #f1efe8;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.dotplot-subtitle {
+  color: rgba(255,255,255,0.62);
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dotplot-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dotplot-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f1efe8;
+  font-size: 1rem;
+}
+
+.dotplot-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.men-dot {
+  background: #2f8fff;
+}
+
+.women-dot {
+  background: #ff2b3a;
+}
+
+#winning-times-dotplot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#winning-times-dotplot svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dotplot-axis path,
+.dotplot-axis line {
+  stroke: rgba(255,255,255,0.18);
+}
+
+.dotplot-axis text {
+  fill: rgba(255,255,255,0.62);
+  font-size: 12px;
+}
+
+.dotplot-axis-label {
+  fill: #f1efe8;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.winning-dot {
+  stroke: rgba(255,255,255,0.8);
+  stroke-width: 1px;
+}
+
+
+/* WINNING TIMES LINE CHART */
+
+/* LINE CHART SECTION */
+
+.linechart-section{
+  min-height:100vh;
+  background:#06070b;
+  padding:5rem 2rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.linechart-inner{
+  width:100%;
+  max-width:1150px;
+  text-align:center;
+}
+
+.linechart-kicker{
+  font-family:'Barlow Condensed';
+  color:#ff2b3a;
+  letter-spacing:.25em;
+  font-size:1rem;
+  margin-bottom:1rem;
+}
+
+.linechart-title{
+  font-family:'Barlow Condensed';
+  font-size:clamp(3rem,8vw,6rem);
+  color:#f1efe8;
+}
+
+.linechart-legend{
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  margin:2rem 0;
+}
+
+.legend-line{
+  display:inline-block;
+  width:30px;
+  height:3px;
+}
+
+.men-line{
+  background:#2f8fff;
+}
+
+.women-line{
+  background:#ff2b3a;
+}
+
+#winning-times-linechart svg{
+  width:100%;
+}

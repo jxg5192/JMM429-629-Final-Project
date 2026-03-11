@@ -177,5 +177,76 @@ SCROLL TO START THE JOURNEY
 <script src="js/champions.js"></script>
 <script src="js/main.js"></script>
 
+
+<!-- PAGE 4 BAR CHART RACE -->
+ <section class="panel winning-times-section">
+  <div class="winning-times-inner">
+    <p class="winning-times-kicker">WINNING TIMES OVER THE YEARS</p>
+    <h2 class="winning-times-title">MEN VS WOMEN</h2>
+
+    <div class="slider-wrap">
+      <input type="range" id="year-slider" />
+      <p id="selected-year"></p>
+    </div>
+
+    <div id="winning-times-viz"></div>
+  </div>
+</section>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/winning-times-slider.js"></script>
+
+
+
+<!-- WINNING TIMES DOT PLOT -->
+ <section class="panel dotplot-section">
+  <div class="dotplot-inner">
+    <p class="dotplot-kicker">WINNING TIMES OVER THE YEARS</p>
+    <h2 class="dotplot-title">MEN VS WOMEN</h2>
+    <p class="dotplot-subtitle">
+      Each dot shows the winning time for that year’s men’s or women’s division.
+    </p>
+
+    <div class="dotplot-legend">
+      <div class="dotplot-legend-item">
+        <span class="dotplot-legend-dot men-dot"></span>
+        <span>Men</span>
+      </div>
+      <div class="dotplot-legend-item">
+        <span class="dotplot-legend-dot women-dot"></span>
+        <span>Women</span>
+      </div>
+    </div>
+
+    <div id="winning-times-dotplot"></div>
+  </div>
+</section>
+
+<!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+<script src="js/winning-times-dotplot.js"></script>
+
+
+<!-- LINE CHART -->
+<section class="panel linechart-section">
+  <div class="linechart-inner">
+
+    <p class="linechart-kicker">WINNING TIMES OVER THE YEARS</p>
+    <h2 class="linechart-title">MEN VS WOMEN</h2>
+
+    <div class="linechart-legend">
+      <div class="linechart-legend-item">
+        <span class="legend-line men-line"></span> Men
+      </div>
+      <div class="linechart-legend-item">
+        <span class="legend-line women-line"></span> Women
+      </div>
+    </div>
+
+    <div id="winning-times-linechart"></div>
+
+  </div>
+</section>
+<script src="js/winning-times-linechart.js"></script>
+
 </body>
 </html>
