@@ -1,10 +1,13 @@
 /* ---------------- HOME PAGE ---------------- */
 body{
 margin:0;
-background:#050505;
+/* background:#050505; */
 font-family:'Inter',sans-serif;
 color:white;
-overflow-x:hidden;
+/* overflow-x:hidden; */
+/* background: #171717; */
+/* background: #171c51;  */
+background: #10143a; 
 }
 
 
@@ -14,41 +17,37 @@ display:flex;
 justify-content:center;  /* center content horizontally */
 align-items:center; /* center content vertically */
 position:relative;
-
-background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7));
+/* background: #171c51;  */
+background: #10143a; 
+/* background: #171717; */
 text-align:center;
 }
 
-.bg-year{
+/* .bg-year{
 position:absolute;
 font-size:28vw;
 font-family:'Barlow Condensed';
 font-weight:800;
 color:rgba(255,255,255,.05);
 z-index:1;
-}
+} */
 
-.hero-content{
+/* .hero-content{
 position:relative;
 z-index:2;
-}
+} */
 
 .top-label{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:10px;
-color:#ff2b3a;
+/* color:#ff2b3a; */
+color: #fc6b06; 
+/* color: #fd6900;  */
 letter-spacing:4px;
 font-family:'Barlow Condensed';
 }
 
-.line{
-width:60px;
-height:1px;
-background:#ff2b3a;
-}
 
 h1{
 font-family:'Barlow Condensed';
@@ -59,12 +58,14 @@ margin:0;
 h2{
 font-family:'Barlow Condensed';
 font-size:6vw;
-color:#ff2b3a;
+/* color:#ff2b3a; */
+color: #fc6b06; 
+/* color: #fd6900;  */
 margin:10px 0;
 }
 
 .subtitle{
-color:#aaa;
+color: white; 
 max-width:600px;
 margin:auto;
 }
@@ -72,31 +73,14 @@ margin:auto;
 .hero-btn{
 margin-top:30px;
 padding:12px 25px;
-border:1px solid rgba(255,255,255,.2);
+border:1px solid white; 
 background:transparent;
-color:#ccc;
-letter-spacing:2px;
-cursor:pointer;
+color:white; 
+/* letter-spacing:2px; */
+/* cursor:pointer; */
 }
 
-.scroll-indicator{
-margin:30px auto;
-width:25px;
-height:45px;
-border:1px solid rgba(255,255,255,.2);
-border-radius:20px;
-position:relative;
-}
 
-.dot{
-width:4px;
-height:8px;
-background:#ff2b3a;
-margin:auto;
-margin-top:6px;
-border-radius:2px;
-animation:scroll 1.5s infinite;
-}
 
 @keyframes scroll{
 0%{transform:translateY(0)}
@@ -108,9 +92,9 @@ animation:scroll 1.5s infinite;
 /* ---------------- FUN FACTS PAGE ---------------- */
 
 .fun-facts {
-  background:
+  /* background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-    #050505;
+    #050505; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +104,7 @@ animation:scroll 1.5s infinite;
 
 .facts-content {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   max-width: 1400px;
   width: 100%;
   display: flex;
@@ -130,6 +114,30 @@ animation:scroll 1.5s infinite;
 
 }
 
+.facts-inner{
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.facts-inner-kicker {
+  font-family: 'Barlow Condensed', sans-serif;
+  /* color: #ff2232; */
+  color: #fc6b06; 
+  letter-spacing: 0.35em;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.facts-inner-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  /* font-size: clamp(4rem, 10vw, 8rem); */
+  line-height: 0.95;
+  /* color: #f1efe8; */
+  color: white; 
+  margin: 0;
+}
+
 /* .facts-content {
   position: relative;
   z-index: 2;
@@ -137,54 +145,15 @@ animation:scroll 1.5s infinite;
 } */
 
 
-.facts-title-white,
-.facts-title-red {
-  font-family: 'Barlow Condensed', sans-serif;
-  /* font-weight: 800; */
-  line-height: 0.92;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.facts-title-white {
-  color: #f3eee7;
-  /* font-size: clamp(4rem, 10vw, 9rem); */
-}
-
-.facts-title-red {
-  color: #ff2232;
-  /* font-size: clamp(4rem, 10vw, 9rem); */
-}
 
 .facts-divider {
   width: 120px;
   height: 5px;
-  background: #ff2232;
+  /* background: #ff2232; */
+  color: #fc6b06; 
   margin: 2rem auto;
 }
 
-.facts-description {
-  max-width: 900px;
-  margin: 0 auto;
-  color: rgba(255,255,255,.68);
-  font-size: clamp(1rem, 1.8vw, 1.3rem);
-  line-height: 1.5;
-}
-
-/* .stats-row {
-  display: flex;
-  justify-content: center;
-  gap: 3.5rem;
-  flex-wrap: wrap;
-  margin-top: 3.5rem;
-} */
-/* .stats-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 5rem;
-  margin-top: 3rem;
-} */
 .stats-row {
   display: flex;
   justify-content: center;
@@ -193,9 +162,7 @@ animation:scroll 1.5s infinite;
   margin-top: 3rem;
 }
 
-/* .stat-box {
-  min-width: 150px;
-} */
+
 
 .stat-box {
   min-width: 150px;
@@ -205,7 +172,8 @@ animation:scroll 1.5s infinite;
 .stat-number {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(2.8rem, 4vw, 4rem);
-  color: #ff2232;
+  /* color: #ff2232; */
+  color: #fc6b06; 
   font-weight: 800;
   line-height: 1;
 }
@@ -214,7 +182,7 @@ animation:scroll 1.5s infinite;
   margin-top: 0.4rem;
   font-size: 0.95rem;
   letter-spacing: 0.12em;
-  color: rgba(255,255,255,.5);
+  color: white; 
 }
 
 
@@ -224,31 +192,55 @@ animation:scroll 1.5s infinite;
 
 .route-section {
   min-height: 100vh;
-  background: #111;
+  /* background: #111; */
   padding: 0;
   display: flex;
   align-items: stretch;
 }
 
-.route-layout {
+/* .route-layout {
   width: 100%;
   display: grid;
   grid-template-columns: 420px 1fr;
   min-height: 100vh;
+} */
+
+.route-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.route-left {
+/* .route-left {
   background: #171717;
   padding: 5rem 4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
+} */
+ .route-left {
+  background: none;
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* max-width: 900px; */
+
+  border-right: none;
 }
+
 
 .route-kicker {
   font-family: 'Barlow Condensed', sans-serif;
-  color: #ff2232;
+  /* color: #ff2232; */
+  color: #fc6b06; 
   letter-spacing: 0.3em;
   font-size: 1.1rem;
   margin: 0 0 2rem 0;
@@ -256,21 +248,21 @@ animation:scroll 1.5s infinite;
 
 .route-title {
   font-family: 'Barlow Condensed', sans-serif;
-  color: #f3eee7;
-  font-size: clamp(4rem, 6vw, 6.5rem);
+  /* color: #f3eee7; */
+  color: white; 
+  /* font-size: clamp(4rem, 6vw, 6.5rem); */
   line-height: 0.9;
   margin: 0;
   text-transform: uppercase;
 }
 
 .route-description {
-  color: rgba(255,255,255,0.55);
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin: 2.5rem 0 3rem 0;
-  max-width: 300px;
+  color: white;
+  font-size: 1.2rem;
+   margin: 2.5rem 0 3rem 0;
+ /* margin-top: 1.5rem;
+  margin-bottom: 2rem; */
 }
-
 .borough-list {
   display: flex;
   flex-direction: column;
@@ -298,49 +290,77 @@ animation:scroll 1.5s infinite;
 }
 
 .borough-item.active .borough-dot {
-  background: #ff2232;
-  box-shadow: 0 0 14px rgba(255, 34, 50, 0.6);
+  /* background: #ff2232; */
+  background:#fc6b06; 
+  /* color: #fc6b06;  */
+  /* box-shadow: 0 0 14px rgba(255, 34, 50, 0.6); */
 }
 
 .borough-name {
   font-family: 'Barlow Condensed', sans-serif;
-  color: #ff2232;
-  font-size: 1.05rem;
+  /* color: #ff2232; */
+  color: grey; 
+  /* font-size: 1.05rem; */
   letter-spacing: 0.08em;
 }
 
-.borough-item:not(.active) .borough-name {
-  color: rgba(255,255,255,0.28);
+.borough-item:hover {
+  opacity: 1;
 }
 
+.borough-item:hover .borough-name {
+  /* color: #ff2232; */
+  color: #fc6b06; 
+}
+
+.borough-item:hover .borough-dot {
+  background:  #fc6b06; 
+  /* background: #ff2232; */
+  /* color: #fc6b06;  */
+}
+
+
 .borough-miles {
-  color: rgba(255,255,255,0.35);
-  font-size: 0.95rem;
+  color: white; 
+  /* font-size: 0.95rem; */
   margin-top: 0.25rem;
 }
 
-.route-right {
+/* .route-right {
   background: #d9d9d9;
   display: flex;
   align-items: stretch;
   justify-content: center;
   overflow: hidden;
-}
+} */
 
-.route-map-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
+#borough-tooltip {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+/* .borough-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+} */
+
+.borough-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 
 /* ---------------- CHAMPIONS SECTION ---------------- */
 
 .champions-section {
   min-height: 100vh;
-  background: #06070b;
+  /* background: #06070b; */
   padding: 5rem 2rem;
   display: flex;
   justify-content: center;
@@ -354,7 +374,7 @@ animation:scroll 1.5s infinite;
 
 .champions-kicker {
   font-family: 'Barlow Condensed', sans-serif;
-  color: #ff2232;
+  color: #fc6b06; 
   letter-spacing: 0.35em;
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
@@ -362,17 +382,18 @@ animation:scroll 1.5s infinite;
 
 .champions-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(4rem, 10vw, 8rem);
+  /* font-size: clamp(4rem, 10vw, 8rem); */
   line-height: 0.95;
-  color: #f1efe8;
+  color: white; 
   margin: 0;
 }
 
 .champions-subtitle {
-  color: rgba(255,255,255,0.6);
+  color: white;
   font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+   margin: 2.5rem 0 3rem 0;
+  /* margin-top: 1.5rem;
+  margin-bottom: 2rem; */
 }
 
 
@@ -385,7 +406,8 @@ animation:scroll 1.5s infinite;
 .champions-tooltip {
   position: absolute;
   pointer-events: none;
-  background: rgba(12, 12, 16, 0.96);
+  /* background: rgba(12, 12, 16, 0.96); */
+  background: white; 
   border: 1px solid white;
   border-radius: 10px;
   padding: 0.8rem 1rem;
@@ -398,24 +420,24 @@ animation:scroll 1.5s infinite;
   transition: opacity 0.15s ease;
   z-index: 20;
   text-align: left;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.35); */
 }
 
 .tooltip-year {
   font-family: 'Barlow Condensed', sans-serif;
-  color: white;
+   color: #10143a;  
   font-size: 1rem;
-  letter-spacing: 0.08em;
+  /* letter-spacing: 0.08em; */
   margin-bottom: 0.35rem;
 }
 
 .tooltip-name {
-  font-weight: 600;
-  color: #ff2232;
+  color: #fc6b06; 
 }
 
 .tooltip-meta {
-  color: white;
+  /* color: white; */
+    color: #10143a; 
 }
 
 .year-label {
@@ -427,188 +449,13 @@ animation:scroll 1.5s infinite;
 
 
 
-
-/* ---------------- WINNING TIMES BAR RACE ---------------- */
-.winning-times-section {
-  min-height: 100vh;
-  background: #06070b;
-  padding: 5rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.winning-times-inner {
-  width: 100%;
-  max-width: 1100px;
-  text-align: center;
-}
-
-.winning-times-kicker {
-  font-family: 'Barlow Condensed', sans-serif;
-  color: #ff2b3a;
-  letter-spacing: 0.25em;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.winning-times-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: #f1efe8;
-  margin: 0 0 2rem 0;
-}
-
-.slider-wrap {
-  margin-bottom: 2rem;
-}
-
-#year-slider {
-  width: 300px;
-}
-
-#selected-year {
-  margin-top: 0.75rem;
-  color: #f1efe8;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2rem;
-}
-
-.division-label {
-  fill: #f1efe8;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.2rem;
-}
-
-.value-label {
-  fill: #f1efe8;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.2rem;
-}
-
-#winning-times-viz .domain,
-#winning-times-viz .tick line {
-  stroke: rgba(255,255,255,0.15);
-}
-
-#winning-times-viz .tick text {
-  fill: rgba(255,255,255,0.55);
-  font-size: 12px;
-}
-
-
-
-/* ---------------- WINNING TIMES DOTPLOT ---------------- */
-
-.dotplot-section {
-  min-height: 100vh;
-  background: #06070b;
-  padding: 5rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dotplot-inner {
-  width: 100%;
-  max-width: 1150px;
-  text-align: center;
-}
-
-.dotplot-kicker {
-  font-family: 'Barlow Condensed', sans-serif;
-  color: #ff2b3a;
-  letter-spacing: 0.25em;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.dotplot-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: #f1efe8;
-  margin: 0;
-  line-height: 0.95;
-}
-
-.dotplot-subtitle {
-  color: rgba(255,255,255,0.62);
-  font-size: 1.15rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.dotplot-legend {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.dotplot-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #f1efe8;
-  font-size: 1rem;
-}
-
-.dotplot-legend-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.men-dot {
-  background: #2f8fff;
-}
-
-.women-dot {
-  background: #ff2b3a;
-}
-
-#winning-times-dotplot {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#winning-times-dotplot svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.dotplot-axis path,
-.dotplot-axis line {
-  stroke: rgba(255,255,255,0.18);
-}
-
-.dotplot-axis text {
-  fill: rgba(255,255,255,0.62);
-  font-size: 12px;
-}
-
-.dotplot-axis-label {
-  fill: #f1efe8;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.winning-dot {
-  stroke: rgba(255,255,255,0.8);
-  stroke-width: 1px;
-}
-
-
 /* WINNING TIMES LINE CHART */
 
 /* LINE CHART SECTION */
 
 .linechart-section{
   min-height:100vh;
-  background:#06070b;
+  /* background:#06070b; */
   padding:5rem 2rem;
   display:flex;
   justify-content:center;
@@ -623,7 +470,7 @@ animation:scroll 1.5s infinite;
 
 .linechart-kicker{
   font-family:'Barlow Condensed';
-  color:#ff2b3a;
+  color: #fc6b06; 
   letter-spacing:.25em;
   font-size:1rem;
   margin-bottom:1rem;
@@ -631,8 +478,9 @@ animation:scroll 1.5s infinite;
 
 .linechart-title{
   font-family:'Barlow Condensed';
-  font-size:clamp(3rem,8vw,6rem);
-  color:#f1efe8;
+  /* font-size:clamp(3rem,8vw,6rem); */
+  /* color:#f1efe8; */
+  color: white; 
 }
 
 .linechart-legend{
@@ -653,7 +501,8 @@ animation:scroll 1.5s infinite;
 }
 
 .women-line{
-  background:#ff2b3a;
+  /* background:#ff2b3a; */
+  background: #e41665; 
 }
 
 #winning-times-linechart svg{

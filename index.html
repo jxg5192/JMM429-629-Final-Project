@@ -20,7 +20,7 @@
 
 <section class="hero">
 
-<div class="bg-year">26.2</div>
+<!-- <div class="bg-year">26.2</div> -->
 
 <div class="hero-content">
 
@@ -39,12 +39,9 @@ TCS NEW YORK CITY MARATHON
 </p>
 
 <button class="hero-btn">
-SCROLL TO START THE JOURNEY
+SCROLL TO START
 </button>
 
-<div class="scroll-indicator">
-<div class="dot"></div>
-</div>
 
 </div>
 
@@ -55,9 +52,11 @@ SCROLL TO START THE JOURNEY
     <section class="panel fun-facts">
   <div class="facts-content">
 
-        <h2 class="facts-title-white">RACE DAY</h2>
-        <h2 class="facts-title-red">FAST FACTS</h2>
-
+  <div class="facts-inner">
+    <p class="facts-inner-kicker">RACE DAY</p>
+    <h2 class="facts-inner-title">FAST FACTS</h2>
+  </div>
+    
         <div class="facts-divider"></div>
 
 
@@ -94,70 +93,89 @@ SCROLL TO START THE JOURNEY
   <div class="route-layout">
     
     <div class="route-left">
-      <p class="route-kicker">THE ROUTE</p>
+      <p class="route-kicker">FIVE BOROUGHS</p>
 
       <h2 class="route-title">
-        FIVE<br />
-        BOROUGHS
+        THE COURSE
       </h2>
 
       <p class="route-description">
-        Scroll to trace the 26.2-mile course through New York City’s five boroughs.
+        Hover over each borough to explore how the marathon unfolds across New York City at each stage of the race.
       </p>
 
+      
       <div class="borough-list">
-        <div class="borough-item active">
-          <span class="borough-dot"></span>
-          <div class="borough-text">
-            <div class="borough-name">STATEN ISLAND</div>
-            <div class="borough-miles">Miles 0–1</div>
-          </div>
-        </div>
+  <div class="borough-item"
+       data-title="Staten Island"
+       data-miles="Miles 0–1"
+       data-description="INSERT TEXT HERE">
+    <span class="borough-dot"></span>
+    <div class="borough-text">
+      <div class="borough-name">STATEN ISLAND</div>
+      <div class="borough-miles">Miles 0–1</div>
+    </div>
+  </div>
 
-        <div class="borough-item">
-          <span class="borough-dot"></span>
-          <div class="borough-text">
-            <div class="borough-name">BROOKLYN</div>
-            <div class="borough-miles">Miles 1–13</div>
-          </div>
-        </div>
+  <div class="borough-item"
+       data-title="Brooklyn"
+       data-miles="Miles 1–13"
+       data-description="NSERT TEXT HERE">
+    <span class="borough-dot"></span>
+    <div class="borough-text">
+      <div class="borough-name">BROOKLYN</div>
+      <div class="borough-miles">Miles 1–13</div>
+    </div>
+  </div>
 
-        <div class="borough-item">
-          <span class="borough-dot"></span>
-          <div class="borough-text">
-            <div class="borough-name">QUEENS</div>
-            <div class="borough-miles">Miles 13–16</div>
-          </div>
-        </div>
+  <div class="borough-item"
+       data-title="Queens"
+       data-miles="Miles 13–16"
+       data-description="INSERT TEXT HERE">
+    <span class="borough-dot"></span>
+    <div class="borough-text">
+      <div class="borough-name">QUEENS</div>
+      <div class="borough-miles">Miles 13–16</div>
+    </div>
+  </div>
 
-        <div class="borough-item">
-          <span class="borough-dot"></span>
-          <div class="borough-text">
-            <div class="borough-name">THE BRONX</div>
-            <div class="borough-miles">Miles 20–21</div>
-          </div>
-        </div>
+  <div class="borough-item"
+       data-title="The Bronx"
+       data-miles="Miles 20–21"
+       data-description="INSERT TEXT HERE">
+    <span class="borough-dot"></span>
+    <div class="borough-text">
+      <div class="borough-name">THE BRONX</div>
+      <div class="borough-miles">Miles 20–21</div>
+    </div>
+  </div>
 
-        <div class="borough-item">
-          <span class="borough-dot"></span>
-          <div class="borough-text">
-            <div class="borough-name">MANHATTAN</div>
-            <div class="borough-miles">Miles 21–26.2</div>
-          </div>
-        </div>
-      </div>
+  <div class="borough-item"
+       data-title="Manhattan"
+       data-miles="Miles 21–26.2"
+       data-description="INSERT TEXT HERE">
+    <span class="borough-dot"></span>
+    <div class="borough-text">
+      <div class="borough-name">MANHATTAN</div>
+      <div class="borough-miles">Miles 21–26.2</div>
+    </div>
+  </div>
+</div>
+
+<div id="borough-tooltip" class="champions-tooltip"></div>
+
     </div>
 
-    <div class="route-right">
+    <!-- <div class="route-right">
       <img
-        src="images/nyc-marathon-map.png"
+        src="images/Nyc-marathon-map.jpg"
         alt="NYC Marathon route map"
         class="route-map-img"
       />
-    </div>
+    </div> -->
 
   </div>
 </section>
+<script src="js/borough.js"></script>
 
 
 
@@ -178,52 +196,7 @@ SCROLL TO START THE JOURNEY
 <script src="js/main.js"></script>
 
 
-<!-- PAGE 4 BAR CHART RACE -->
- <section class="panel winning-times-section">
-  <div class="winning-times-inner">
-    <p class="winning-times-kicker">WINNING TIMES OVER THE YEARS</p>
-    <h2 class="winning-times-title">MEN VS WOMEN</h2>
 
-    <div class="slider-wrap">
-      <input type="range" id="year-slider" />
-      <p id="selected-year"></p>
-    </div>
-
-    <div id="winning-times-viz"></div>
-  </div>
-</section>
-
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="js/winning-times-slider.js"></script>
-
-
-
-<!-- WINNING TIMES DOT PLOT -->
- <section class="panel dotplot-section">
-  <div class="dotplot-inner">
-    <p class="dotplot-kicker">WINNING TIMES OVER THE YEARS</p>
-    <h2 class="dotplot-title">MEN VS WOMEN</h2>
-    <p class="dotplot-subtitle">
-      Each dot shows the winning time for that year’s men’s or women’s division.
-    </p>
-
-    <div class="dotplot-legend">
-      <div class="dotplot-legend-item">
-        <span class="dotplot-legend-dot men-dot"></span>
-        <span>Men</span>
-      </div>
-      <div class="dotplot-legend-item">
-        <span class="dotplot-legend-dot women-dot"></span>
-        <span>Women</span>
-      </div>
-    </div>
-
-    <div id="winning-times-dotplot"></div>
-  </div>
-</section>
-
-<!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
-<script src="js/winning-times-dotplot.js"></script>
 
 
 <!-- LINE CHART -->

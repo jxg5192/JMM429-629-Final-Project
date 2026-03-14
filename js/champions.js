@@ -81,7 +81,7 @@ async function initChampionsViz() {
 
     nodeGroups.append("circle")
       .attr("r", circleRadius)
-      .attr("fill", "#2f8fff")
+      .attr("fill", "#fc6b06")
     //   .attr("opacity", 0.98)
     //   .style("filter", `drop-shadow(0 0 8px #2f8fff)`)
       .on("mouseenter", function(event, d) {
@@ -116,7 +116,7 @@ async function initChampionsViz() {
     nodeGroups.append("text")
       .attr("class", "year-label")
       .attr("y", circleRadius + 24)
-      .attr("fill", "#2f8fff")
+      .attr("fill", "#fc6b06")
       .text(d => d.year);
   }
 

@@ -9,13 +9,21 @@ async function initWinningTimesLineChart() {
     };
   });
 
-  var menData = data.filter(function(d) {
-    return d.division === "Men";
-  });
+  // var menData = data.filter(function(d) {
+  //   return d.division === "Men";
+  // });
 
-  var womenData = data.filter(function(d) {
-    return d.division === "Women";
-  });
+  // var womenData = data.filter(function(d) {
+  //   return d.division === "Women";
+  // });
+
+  var menData = data.filter(function(d) {
+  return d.division === "Men" && !isNaN(d.time_hrs);
+});
+
+var womenData = data.filter(function(d) {
+  return d.division === "Women" && !isNaN(d.time_hrs);
+});
 
   var width = 1000;
   var height = 500;
@@ -70,7 +78,7 @@ async function initWinningTimesLineChart() {
   svg.append("path")
     .datum(womenData)
     .attr("fill", "none")
-    .attr("stroke", "#ff2b3a")
+    .attr("stroke", "#e41665")
     .attr("stroke-width", 3)
     .attr("d", lineGenerator);
 }
