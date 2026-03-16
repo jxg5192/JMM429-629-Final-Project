@@ -1,29 +1,45 @@
 
-  const boroughItems = document.querySelectorAll(".borough-item");
-  const boroughTooltip = document.querySelector("#borough-tooltip");
+// get all borough items on the page 
+  var boroughItems = document.querySelectorAll(".borough-item");
+  // get the tooltip box
+var boroughTooltip = document.querySelector("#borough-tooltip");
 
-  boroughItems.forEach(item => {
-    item.addEventListener("mouseenter", function (event) {
-      const title = this.dataset.title;
-      const miles = this.dataset.miles;
-      const description = this.dataset.description;
+// loop through each borough 
+boroughItems.forEach(function(item) {
 
-      boroughTooltip.innerHTML = `
-        <div class="tooltip-year">${title}</div>
-        <div class="tooltip-name">${miles}</div>
-        <div class="tooltip-meta">${description}</div>
-      `;
+  // when u hover on the borough.....
+  item.addEventListener("mouseenter", function(event) {
 
-      boroughTooltip.style.opacity = 1;
-    });
+        // grab the data stored on the element (title, miles, description)
+    var title = this.dataset.title;
+    var miles = this.dataset.miles;
+    var description = this.dataset.description;
 
-    item.addEventListener("mousemove", function (event) {
-      boroughTooltip.style.left = `${event.pageX}px`;
-      boroughTooltip.style.top = `${event.pageY}px`;
-    });
+        // fill the tooltip with the correct content
+    boroughTooltip.innerHTML =
+      "<div class='tooltip-year'>" + title + "</div>" +
+      "<div class='tooltip-name'>" + miles + "</div>" +
+      "<div class='tooltip-meta'>" + description + "</div>";
 
-    item.addEventListener("mouseleave", function () {
-      boroughTooltip.style.opacity = 0;
-    });
+          // and make the tooltip visible
+    boroughTooltip.style.opacity = 1;
   });
 
+  // when you move your mouse
+  item.addEventListener("mousemove", function(event) {
+
+        // move the tooltip to follow your mouse
+    boroughTooltip.style.left = event.pageX + "px";
+    boroughTooltip.style.top = event.pageY + "px";
+
+  });
+
+  // when you remove mouse from borough...
+  item.addEventListener("mouseleave", function() {
+
+        // hide the tooltip
+    boroughTooltip.style.opacity = 0;
+
+  });
+
+});
