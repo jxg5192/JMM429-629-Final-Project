@@ -4,7 +4,6 @@ margin:0;
 /* background:#050505; */
 font-family:'Inter',sans-serif;
 color:white;
-/* overflow-x:hidden; */
 /* background: #171717; */
 /* background: #171c51;  */
 /* background: #10143a;  */
@@ -109,61 +108,52 @@ letter-spacing:2px;
 
 .facts-content {
   position: relative;
-  /* z-index: 2; */
   max-width: 1400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-100px);
+  transform: translateY(-70px);
 
 }
 
-.facts-inner{
+.facts{
   width: 100%;
   max-width: 1100px;
   text-align: center;
 }
 
-.facts-inner-kicker {
+.facts-sub-title {
   font-family: 'Barlow Condensed', sans-serif;
   /* color: #ff2232; */
   color: #fc6b06; 
-  letter-spacing: 0.35em;
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-bottom: 24px; 
 }
 
-.facts-inner-title {
+.facts-big-title {
   font-family: 'Barlow Condensed', sans-serif;
-  /* font-size: clamp(4rem, 10vw, 8rem); */
   line-height: 0.95;
   /* color: #f1efe8; */
   color: white; 
   margin: 0;
 }
 
-/* .facts-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-} */
-
-
 
 .facts-divider {
   width: 120px;
   height: 5px;
   background: #fc6b06; 
-  margin: 2rem auto;
+  margin: 35px auto;
 }
 
 .stats-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 43px; 
+  margin-top: 45px; 
 }
 
 
@@ -212,7 +202,7 @@ letter-spacing:2px;
 
 .stat-number {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-size: 60px; 
   /* color: #ff2232; */
   color: #fc6b06; 
   font-weight: 800;
@@ -220,11 +210,9 @@ letter-spacing:2px;
 }
 
 .stat-label {
-  margin-top: 0.4rem;
-  font-size: 0.95rem;
-  /* letter-spacing: 0.12em; */
+   margin-top: 6.5px; 
+  font-size: 15px; 
   letter-spacing:2px;
-
   color: white; 
 }
 
@@ -258,15 +246,8 @@ letter-spacing:2px;
   align-items: center;
 }
 
-/* .route-left {
-  background: #171717;
-  padding: 5rem 4rem 4rem 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-} */
- .route-left {
+
+ .route-pg {
   background: none;
   padding: 3rem 2rem;
 
@@ -280,20 +261,19 @@ letter-spacing:2px;
 }
 
 
-.route-kicker {
+.route-sub-title {
   font-family: 'Barlow Condensed', sans-serif;
   /* color: #ff2232; */
   color: #fc6b06; 
-  letter-spacing: 0.3em;
-  font-size: 1.1rem;
-  margin: 0 0 2rem 0;
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-bottom: 24px; 
 }
 
-.route-title {
+.route-big-title {
   font-family: 'Barlow Condensed', sans-serif;
   /* color: #f3eee7; */
   color: white; 
-  /* font-size: clamp(4rem, 6vw, 6.5rem); */
   line-height: 0.9;
   margin: 0;
   text-transform: uppercase;
@@ -302,21 +282,18 @@ letter-spacing:2px;
 .route-description {
   color: white;
   letter-spacing: 1px; 
-  /* font-size: 1.2rem; */
-   margin: 2.5rem 0 3rem 0;
- /* margin-top: 1.5rem;
-  margin-bottom: 2rem; */
+   margin: 40px 0 48px 0;
 }
 .borough-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .borough-item {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 20px;
   opacity: 0.35;
   transition: opacity 0.25s ease;
 }
@@ -336,16 +313,13 @@ letter-spacing:2px;
 .borough-item.active .borough-dot {
   /* background: #ff2232; */
   background:#fc6b06; 
-  /* color: #fc6b06;  */
-  /* box-shadow: 0 0 14px rgba(255, 34, 50, 0.6); */
 }
 
 .borough-name {
   font-family: 'Barlow Condensed', sans-serif;
   /* color: #ff2232; */
   color: grey; 
-  /* font-size: 1.05rem; */
-  letter-spacing: 0.08em;
+  letter-spacing: 4px;
 }
 
 .borough-item:hover {
@@ -366,17 +340,9 @@ letter-spacing:2px;
 
 .borough-miles {
   color: white; 
-  /* font-size: 0.95rem; */
-  margin-top: 0.25rem;
+  margin-top:4px;
 }
 
-/* .route-right {
-  background: #d9d9d9;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  overflow: hidden;
-} */
 
 
 #borough-tooltip {
@@ -384,14 +350,7 @@ letter-spacing:2px;
   pointer-events: none;
   opacity: 0;
 }
-/* .borough-item {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  opacity: 0.35;
-  transition: opacity 0.25s ease;
-  cursor: pointer;
-} */
+
 
 .borough-text {
   display: flex;
@@ -410,21 +369,21 @@ letter-spacing:2px;
   justify-content: center;
 }
 
-.champions-inner {
+.champions-pg {
   width: 100%;
   max-width: 1100px;
   text-align: center;
 }
 
-.champions-kicker {
+.champions-sub-title {
   font-family: 'Barlow Condensed', sans-serif;
   color: #fc6b06; 
-  letter-spacing: 0.35em;
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-bottom: 24px; 
 }
 
-.champions-title {
+.champions-big-title {
   font-family: 'Barlow Condensed', sans-serif;
   /* font-size: clamp(4rem, 10vw, 8rem); */
   line-height: 0.95;
@@ -432,13 +391,10 @@ letter-spacing:2px;
   margin: 0;
 }
 
-.champions-subtitle {
+.champions-description {
   color: white;
     letter-spacing: 1px; 
-  /* font-size: 1.2rem; */
-   margin: 2.5rem 0 3rem 0;
-  /* margin-top: 1.5rem;
-  margin-bottom: 2rem; */
+     margin: 40px 0 48px 0;
 }
 
 
@@ -457,7 +413,7 @@ letter-spacing:2px;
   border-radius: 10px;
   padding: 0.8rem 1rem;
   color: white;
-  font-size: 0.95rem;
+  font-size: 15.5px;
   line-height: 1.45;
   min-width: 180px;
   opacity: 0;
@@ -471,23 +427,25 @@ letter-spacing:2px;
 .tooltip-year {
   font-family: 'Barlow Condensed', sans-serif;
    color: #10143a;  
-  font-size: 1rem;
+  font-size: 16px;
   /* letter-spacing: 0.08em; */
   margin-bottom: 0.35rem;
 }
 
 .tooltip-name {
   color: #fc6b06; 
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .tooltip-meta {
   /* color: white; */
     color: #10143a; 
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .year-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-anchor: middle;
 }
 
@@ -505,21 +463,21 @@ letter-spacing:2px;
   align-items:center;
 }
 
-.linechart-inner{
+.linechart-pg{
   width:100%;
   max-width:1150px;
   text-align:center;
 }
 
-.linechart-kicker{
+.linechart-sub-title{
   font-family:'Barlow Condensed';
   color: #fc6b06; 
-  letter-spacing:.25em;
-  font-size:1rem;
-  margin-bottom:1rem;
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-bottom: 24px; 
 }
 
-.linechart-title{
+.linechart-big-title{
   font-family:'Barlow Condensed';
   /* font-size:clamp(3rem,8vw,6rem); */
   /* color:#f1efe8; */
@@ -529,8 +487,8 @@ letter-spacing:2px;
 .linechart-legend{
   display:flex;
   justify-content:center;
-  gap:2rem;
-  margin:2rem 0;
+  gap:32px;
+  margin:32px 0;
 }
 
 .legend-line{

@@ -16,7 +16,7 @@
 
 <body>
 
- <!-- PAGE 1 -->
+ <!-- PAGE 1 - HOME/HERO -->
 
 <section class="hero">
 
@@ -24,14 +24,11 @@
 
 <div class="hero-content">
 
-<div class="top-label">
-<span class="line"></span>
-TCS NEW YORK CITY MARATHON
-<span class="line"></span>
+<div class="top-label"> 
+  TCS NEW YORK CITY MARATHON
 </div>
 
 <h1>26.2 MILES</h1>
-
 <h2>THROUGH NYC</h2>
 
 <p class="subtitle">
@@ -48,13 +45,13 @@ SCROLL TO START
 </section>
 
 
-<!-- PAGE 2 -->
+<!-- PAGE 2 - FUN FACTS -->
     <section class="panel fun-facts">
   <div class="facts-content">
 
-  <div class="facts-inner">
-    <p class="facts-inner-kicker">RACE DAY</p>
-    <h2 class="facts-inner-title">FAST FACTS</h2>
+  <div class="facts">
+    <p class="facts-sub-title">RACE DAY</p>
+    <h2 class="facts-big-title">FAST FACTS</h2>
   </div>
     
         <div class="facts-divider"></div>
@@ -86,16 +83,16 @@ SCROLL TO START
     </section>
 
 
-<!-- PAGE 3 THE ROUTE -->
+<!-- PAGE 3 - THE ROUTE -->
 
 
 <section class="panel route-section">
   <div class="route-layout">
     
-    <div class="route-left">
-      <p class="route-kicker">FIVE BOROUGHS</p>
+    <div class="route-pg">
+      <p class="route-sub-title">FIVE BOROUGHS</p>
 
-      <h2 class="route-title">
+      <h2 class="route-big-title">
         THE COURSE
       </h2>
 
@@ -165,13 +162,6 @@ SCROLL TO START
 
     </div>
 
-    <!-- <div class="route-right">
-      <img
-        src="images/Nyc-marathon-map.jpg"
-        alt="NYC Marathon route map"
-        class="route-map-img"
-      />
-    </div> -->
 
   </div>
 </section>
@@ -179,12 +169,12 @@ SCROLL TO START
 
 
 
-<!-- PAGE 3 THE WINNERS -->
+<!-- PAGE 3 - THE WINNERS -->
 <section class="panel champions-section" id="champions-section">
-  <div class="champions-inner">
-    <p class="champions-kicker">FROM 1970 TO 2020</p>
-    <h2 class="champions-title">THE WINNERS</h2>
-    <p class="champions-subtitle">Hover over a year to see the winner, race time, and country.</p>
+  <div class="champions-pg">
+    <p class="champions-sub-title">FROM 1970 TO 2020</p>
+    <h2 class="champions-big-title">THE WINNERS</h2>
+    <p class="champions-description">Hover over a year to see the winner, race time, and country.</p>
 
     <div id="champions-viz"></div>
     <div id="champions-tooltip" class="champions-tooltip"></div>
@@ -199,12 +189,12 @@ SCROLL TO START
 
 
 
-<!-- LINE CHART -->
+<!-- PAGE 4 - MEN VS WOMEN OVER THE YRS -->
 <section class="panel linechart-section">
-  <div class="linechart-inner">
+  <div class="linechart-pg">
 
-    <p class="linechart-kicker">WINNING TIMES OVER THE YEARS</p>
-    <h2 class="linechart-title">MEN VS WOMEN</h2>
+    <p class="linechart-sub-title">WINNING TIMES OVER THE YEARS</p>
+    <h2 class="linechart-big-title">MEN VS WOMEN</h2>
 
     <div class="linechart-legend">
       <div class="linechart-legend-item">
@@ -219,9 +209,11 @@ SCROLL TO START
 
   </div>
 </section>
+
 <script src="js/winning-times-linechart.js"></script>
 <script src="js/funfact.js"></script>
-
+<script src="js/borough.js"></script>
+<script src="js/champions.js"></script>
 
 </body>
 </html>
