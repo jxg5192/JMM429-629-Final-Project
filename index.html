@@ -35,10 +35,6 @@
 50,000 RUNNERS • 1 FINISH LINE
 </p>
 
-<button class="hero-btn">
-SCROLL TO START
-</button>
-
 
 </div>
 
@@ -83,91 +79,99 @@ SCROLL TO START
     </section>
 
 
-<!-- PAGE 3 - THE ROUTE -->
 
 
-<section class="panel route-section">
-  <div class="route-layout">
-    
-    <div class="route-pg">
+    <!-- THE ROUTE PAGE -->
+
+ <div class="route-shell">
+
+    <!-- centered title block -->
+    <div class="route-header">
       <p class="route-sub-title">FIVE BOROUGHS</p>
-
-      <h2 class="route-big-title">
-        THE COURSE
-      </h2>
-
+      <h2 class="route-big-title">THE COURSE</h2>
       <p class="route-description">
         Hover over each borough to explore how the marathon unfolds across New York City.
       </p>
-
-      
-      <div class="borough-list">
-  <div class="borough-item"
-       data-title="Staten Island"
-       data-miles="Miles 0–1"
-       data-description="INSERT TEXT HERE">
-    <span class="borough-dot"></span>
-    <div class="borough-text">
-      <div class="borough-name">STATEN ISLAND</div>
-      <div class="borough-miles">Miles 0–1</div>
-    </div>
-  </div>
-
-  <div class="borough-item"
-       data-title="Brooklyn"
-       data-miles="Miles 1–13"
-       data-description="NSERT TEXT HERE">
-    <span class="borough-dot"></span>
-    <div class="borough-text">
-      <div class="borough-name">BROOKLYN</div>
-      <div class="borough-miles">Miles 1–13</div>
-    </div>
-  </div>
-
-  <div class="borough-item"
-       data-title="Queens"
-       data-miles="Miles 13–16"
-       data-description="INSERT TEXT HERE">
-    <span class="borough-dot"></span>
-    <div class="borough-text">
-      <div class="borough-name">QUEENS</div>
-      <div class="borough-miles">Miles 13–16</div>
-    </div>
-  </div>
-
-  <div class="borough-item"
-       data-title="The Bronx"
-       data-miles="Miles 20–21"
-       data-description="INSERT TEXT HERE">
-    <span class="borough-dot"></span>
-    <div class="borough-text">
-      <div class="borough-name">THE BRONX</div>
-      <div class="borough-miles">Miles 20–21</div>
-    </div>
-  </div>
-
-  <div class="borough-item"
-       data-title="Manhattan"
-       data-miles="Miles 21–26.2"
-       data-description="INSERT TEXT HERE">
-    <span class="borough-dot"></span>
-    <div class="borough-text">
-      <div class="borough-name">MANHATTAN</div>
-      <div class="borough-miles">Miles 21–26.2</div>
-    </div>
-  </div>
-</div>
-
-<div id="borough-tooltip" class="champions-tooltip"></div>
-
     </div>
 
+    <!-- two-column content -->
+    <div class="route-content">
+      <div class="route-left">
+        <div class="borough-list">
+        <div class="borough-item"
+             data-title="Staten Island"
+             data-miles="Miles 0–1"
+             data-description="The race begins in Staten Island at the base of the Verrazzano-Narrows Bridge. This is the longest bridge crossing in the race."
 
+"
+             data-borough="Staten Island">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">STATEN ISLAND</div>
+            <div class="borough-miles">Miles 0–1</div>
+          </div>
+        </div>
+
+        <div class="borough-item"
+             data-title="Brooklyn"
+             data-miles="Miles 1–13"
+             data-description="Brooklyn is the longest borough segment of the race and usually one of the loudest, with major crowd support and long stretches through multiple neighborhoods."
+             data-borough="Brooklyn">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">BROOKLYN</div>
+            <div class="borough-miles">Miles 1–13</div>
+          </div>
+        </div>
+
+        <div class="borough-item"
+             data-title="Queens"
+             data-miles="Miles 13–16"
+             data-description="The Queensboro Bridge at mile 15 allows no spectators, making it the most mentally challenging stretch."
+             data-borough="Queens">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">QUEENS</div>
+            <div class="borough-miles">Miles 13–16</div>
+          </div>
+        </div>
+
+        <div class="borough-item"
+             data-title="The Bronx"
+             data-miles="Miles 20–21"
+             data-description="The Bronx is the shortest borough stretch, just 1.5 miles, but it comes at mile 22, when runners are preparing for the final push back into Manhattan."
+             data-borough="Bronx">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">THE BRONX</div>
+            <div class="borough-miles">Miles 20–21</div>
+          </div>
+        </div>
+
+        <div class="borough-item"
+             data-title="Manhattan"
+             data-miles="Miles 21–26.2"
+             data-description="Manhattan includes the final stretch of the marathon. The final 2.2 miles up Fifth Avenue and into Central Park are  hilly and emotional."
+             data-borough="Manhattan">
+          <span class="borough-dot"></span>
+          <div class="borough-text">
+            <div class="borough-name">MANHATTAN</div>
+            <div class="borough-miles">Miles 21–26.2</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="borough-tooltip" class="champions-tooltip"></div>
+      </div>
+
+            <div class="route-right">
+      <div class="route-map-wrap">
+        <div id="borough-map"></div>
+ </div>
+    </div>
   </div>
+    </div>
 </section>
-<script src="js/borough.js"></script>
-
-
 
 <!-- PAGE 3 - THE WINNERS -->
 <section class="panel champions-section" id="champions-section">
@@ -188,32 +192,73 @@ SCROLL TO START
 
 
 
-
-<!-- PAGE 4 - MEN VS WOMEN OVER THE YRS -->
-<section class="panel linechart-section">
-  <div class="linechart-pg">
-
-    <p class="linechart-sub-title">WINNING TIMES OVER THE YEARS</p>
-    <h2 class="linechart-big-title">MEN VS WOMEN</h2>
-
-    <div class="linechart-legend">
-      <div class="linechart-legend-item">
-        <span class="legend-line men-line"></span> Men
-      </div>
-      <div class="linechart-legend-item">
-        <span class="legend-line women-line"></span> Women
-      </div>
-    </div>
-
-    <div id="winning-times-linechart"></div>
-
+<!-- PAGE 4 BAR CHART RACE -->
+<section class="panel winning-times-section" id="winning-times-section">
+  <div class="winning-times-inner">
+    <p class="winning-times-sub-title ">WINNING TIMES OVER THE YEARS</p>
+    <h2 class="winning-times-big-title">MEN VS WOMEN</h2>
+    <p class="champions-description">See men and women winning times throughout the years</p>
+    <div id="winning-times-viz"></div>
   </div>
 </section>
 
+
+
+<!-- PAGE 5 RECORD WINNER -->
+
+
+ <section class="record-section">
+  <div class="record-shell">
+    <div class="record-badge" id="record-badge">
+      <span id="record-badge-text">COURSE RECORD HOLDER </span>
+    </div>
+
+    <div class="record-hero">
+      <div class="record-time" id="record-time">--:--:--</div>
+      <h2 class="record-name" id="record-name">Runner Name</h2>
+      <p class="record-sub" id="record-sub">FASTEST FINISH IN THE DATASET • 1970 - 2020 </p>
+
+      <div class="record-divider">
+        <span class="record-divider-dot"></span>
+      </div>
+
+      <div class="record-stats">
+        <div class="record-stat">
+          <div class="record-stat-label">PACE</div>
+          <div class="record-stat-value" id="record-pace">--</div>
+        </div>
+
+        <div class="record-stat">
+          <div class="record-stat-label">YEAR</div>
+          <div class="record-stat-value" id="record-year">--</div>
+        </div>
+
+        <div class="record-stat">
+          <div class="record-stat-label">DIVISION</div>
+          <div class="record-stat-value" id="record-division">--</div>
+        </div>
+
+        <div class="record-stat">
+          <div class="record-stat-label">COUNTRY</div>
+          <div class="record-stat-value" id="record-country">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- <script src="https://unpkg.com/scrollama"></script> -->
 <script src="js/winning-times-linechart.js"></script>
 <script src="js/funfact.js"></script>
 <script src="js/borough.js"></script>
 <script src="js/champions.js"></script>
+<script src="js/winning-times-race.js"></script>
+<script src="js/borough-map.js"></script>
+<script src="js/fastest-record.JS"></script>
+
+<!-- <script src="js/barchart.js"></script> -->
+
 
 </body>
 </html>

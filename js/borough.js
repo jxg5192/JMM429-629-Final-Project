@@ -26,13 +26,23 @@ boroughItems.forEach(function(item) {
   });
 
   // when you move your mouse
-  item.addEventListener("mousemove", function(event) {
+  // item.addEventListener("mousemove", function(event) {
 
-        // move the tooltip to follow your mouse
-    boroughTooltip.style.left = event.pageX + "px";
-    boroughTooltip.style.top = event.pageY + "px";
+  //       // move the tooltip to follow your mouse
+  //   boroughTooltip.style.left = event.pageX + "px";
+  //   boroughTooltip.style.top = event.pageY + "px";
 
-  });
+  // });
+//   item.addEventListener("mousemove", function(event) {
+//   boroughTooltip.style.left = event.pageX + 30 + "px";
+//   boroughTooltip.style.top = event.pageY - 10 + "px";
+// });
+item.addEventListener("mousemove", function(event) {
+  const parentRect = this.closest(".route-left").getBoundingClientRect();
+
+  boroughTooltip.style.left = (event.clientX - parentRect.left + 30) + "px";
+  boroughTooltip.style.top = (event.clientY - parentRect.top - 10) + "px";
+});
 
   // when you remove mouse from borough...
   item.addEventListener("mouseleave", function() {

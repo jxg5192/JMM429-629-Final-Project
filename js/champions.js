@@ -127,12 +127,14 @@ async function initChampionsViz() {
     nodeGroups.append("circle") //add a circle for each year 
       .attr("r", circleRadius) //size of circle
       .attr("fill", "#fc6b06") //color of circle
-      .attr("opacity", 0.98)
+      .attr("opacity", 0.70)
       .on("mouseenter", function(event, d) { //when you hover on the circle do...
 
         d3.select(this)
           .transition()
           .duration(120)
+          .attr("fill", "#fc6b06") //color of circle
+          .attr("opacity", 0.98)
           .style("filter", "drop-shadow(0 0 7px #fc6b06)") //circle glows
           .attr("r", circleRadius + 5); //circle gets a bit bigger
 
@@ -157,6 +159,8 @@ async function initChampionsViz() {
         d3.select(this)
           .transition()
           .duration(120)
+           .attr("fill", "#fc6b06") //color of circle
+          .attr("opacity", 0.70)
           .style("filter", "none")
           .attr("r", circleRadius);
 
