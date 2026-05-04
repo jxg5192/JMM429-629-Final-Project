@@ -35,7 +35,10 @@
 50,000 RUNNERS • 1 FINISH LINE
 </p>
 
-
+<div class="scroll-cue">
+  <span>SCROLL TO START</span>
+  <div class="scroll-arrow">↓</div>
+</div>
 </div>
 
 </section>
@@ -173,6 +176,57 @@
     </div>
 </section>
 
+
+
+
+<!-- PG 6 MARATHON TIMELINE -->
+
+<section class="panel timeline-section" id="timeline-section">
+  <div class="timeline-inner">
+
+    <div class="timeline-header">
+      <p class="timeline-sub-title">MARATHON HISTORY</p>
+      <h2 class="timeline-big-title">KEY MOMENTS</h2>
+      <p class="timeline-description">
+        Scroll through major milestones in the history of the New York City Marathon.
+      </p>
+    </div>
+
+    <div class="timeline-sticky">
+      <p class="timeline-scroll-note">Scroll down to move through the timeline →</p>
+      <div class="timeline-card" id="timeline-card">
+        <p class="timeline-year" id="timeline-year">1970</p>
+        <p class="timeline-text" id="timeline-text">
+          The first New York City Marathon was held, featuring 127 runners running laps around Central Park.
+        </p>
+      </div>
+
+      <div class="timeline-track-wrap">
+        <div class="timeline-line"></div>
+        <div class="timeline-progress" id="timeline-progress"></div>
+        <div class="timeline-years" id="timeline-years"></div>
+      </div>
+    </div>
+
+    <div class="timeline-steps">
+      <div class="timeline-step" data-year="1970" data-text="The first New York City Marathon was held, featuring 127 runners running laps around Central Park."></div>
+      <div class="timeline-step" data-year="1976" data-text="The race expanded to all 5 boroughs to celebrate the U.S. Bicentennial."></div>
+      <div class="timeline-step" data-year="1978" data-text="Norwegian Grete Waitz set the first of her record nine marathon wins."></div>
+      <div class="timeline-step" data-year="2009" data-text="Meb Keflezighi became the first American winner since 1982."></div>
+      <div class="timeline-step" data-year="2011" data-text="Kenya's Geoffrey Mutai sets new course record of 2:05:06. The fastest time ever run in New York"></div>
+      <div class="timeline-step" data-year="2012" data-text="The marathon was cancelled for the first time due to Hurricane Sandy."></div>
+      <div class="timeline-step" data-year="2013" data-text="Over 50,000 finishers crossed the line for the first time."></div>
+      <div class="timeline-step" data-year="2014" data-text="Tata Consultancy Services (TCS) became the new title sponsor."></div>
+      <div class="timeline-step" data-year="2016" data-text="The 40th running of the five-borough course featured a record 51,394 finishers."></div>
+      <div class="timeline-step" data-year="2017" data-text="Shalane Flanagan became the first American women's open division champion in 40 years."></div>
+      <div class="timeline-step" data-year="2020" data-text="The in-person race was cancelled due to the COVID-19 pandemic, holding a virtual event instead."></div>
+    </div>
+
+
+  </div>
+</section>
+
+
 <!-- PAGE 3 - THE WINNERS -->
 <section class="panel champions-section" id="champions-section">
   <div class="champions-pg">
@@ -198,6 +252,18 @@
     <p class="winning-times-sub-title ">WINNING TIMES OVER THE YEARS</p>
     <h2 class="winning-times-big-title">MEN VS WOMEN</h2>
     <p class="champions-description">See men and women winning times throughout the years</p>
+
+    <!-- FILTERS -->
+
+        <div class="year-filter">
+      <label for="year-select">Jump to year:</label>
+      <select id="year-select">
+        <option value="autoplay">Autoplay</option>
+      </select>
+    </div>
+
+<!-- END FILTERS -->
+
     <div id="winning-times-viz"></div>
   </div>
 </section>
@@ -247,6 +313,22 @@
   </div>
 </section>
 
+   <p class="timeline-source">
+      Information derived from NYRR’s TCS New York City Marathon history page. Dataset derived from https://runningwithrock.com.
+    </p>
+
+
+
+<script src="https://unpkg.com/scrollama"></script>
+<script src="js/timeline.js"></script>
+
+<script src="https://unpkg.com/scrollama"></script>
+<script src="js/timeline.js"></script>
+<script src="https://unpkg.com/scrollama"></script>
+<script src="js/timeline.js"></script>
+
+
+
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <!-- <script src="https://unpkg.com/scrollama"></script> -->
 <script src="js/winning-times-linechart.js"></script>
@@ -258,6 +340,8 @@
 <script src="js/fastest-record.JS"></script>
 
 <!-- <script src="js/barchart.js"></script> -->
+
+
 
 
 </body>

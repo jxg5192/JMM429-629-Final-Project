@@ -74,6 +74,22 @@ letter-spacing:2px;
 
 }
 
+.scroll-cue {
+  margin-top: 32px;
+  text-align: center;
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 4px;
+  font-size: 16px;
+  opacity: 0.85;
+  animation: fadeInCue 1s ease 0.8s both;
+}
+
+.scroll-arrow {
+  font-size: 28px;
+  margin-top: 8px;
+  animation: bounceArrow 1.4s infinite ease-in-out;
+}
 
 @keyframes scroll{
 0%{transform:translateY(0)}
@@ -258,7 +274,7 @@ letter-spacing:2px;
   display: flex; 
   justify-content: center; /* instead of space-between */ 
   align-items: center; 
-  gap: 48px; /* smaller gap */
+  gap: 20px; /* smaller gap */
    max-width: 1100px;
    margin: 0 auto; 
   } 
@@ -464,66 +480,6 @@ letter-spacing:2px;
 
 
 
-/* WINNING TIMES LINE CHART */
-
-.linechart-section{
-  min-height:100vh;
-  /* background:#06070b; */
-  padding:5rem 2rem;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.linechart-pg{
-  width:100%;
-  max-width:1150px;
-  text-align:center;
-}
-
-.linechart-sub-title{
-  font-family:'Barlow Condensed';
-  color: #fc6b06; 
-  letter-spacing: 4px;
-  font-size: 18px;
-  margin-bottom: 24px; 
-}
-
-.linechart-big-title{
-  font-family:'Barlow Condensed';
-  /* font-size:clamp(3rem,8vw,6rem); */
-  /* color:#f1efe8; */
-  color: white; 
-}
-
-.linechart-legend{
-  display:flex;
-  justify-content:center;
-  gap:32px;
-  margin:32px 0;
-}
-
-.legend-line{
-  display:inline-block;
-  width:30px;
-  height:3px;
-}
-
-.men-line{
-  background:#2f8fff;
-}
-
-.women-line{
-  /* background:#ff2b3a; */
-  background: #e41665; 
-}
-
-#winning-times-linechart svg{
-  width:100%;
-}
-
-
-
 /* ---------------- WINNING TIMES BAR RACE ---------------- */
 
 .winning-times-section {
@@ -607,7 +563,32 @@ letter-spacing:2px;
   text-anchor: end;
 }
 
+/* FILTERS CSS */
+.year-filter {
+  margin: 24px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 2px;
+}
 
+.year-filter select {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 8px 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.year-filter option {
+  color: #0c102d;
+}
+/* END FILTERS CSS */
 
 /* RECORD WINNER PART */
 
@@ -781,4 +762,180 @@ margin-top: 2rem;
   .record-sub {
     letter-spacing: 2px;
   }
+}
+
+
+
+/* MARATHON TIMELINE STYLING */
+/* ---------------- TIMELINE SECTION ---------------- */
+/* ---------------- TIMELINE SECTION ---------------- */
+
+.timeline-section {
+  min-height: 100vh;
+  background: #0c102d;
+  color: white;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timeline-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+}
+
+.timeline-sub-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fc6b06;
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.timeline-big-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: white;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.timeline-description {
+  color: white;
+  letter-spacing: 1px;
+  margin: 32px auto 0 auto;
+  max-width: 800px;
+}
+
+.timeline-sticky {
+  position: sticky;
+  top: 110px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-card {
+  width: 560px;
+  max-width: 85vw;
+  min-height: 190px;
+  background: white;
+  color: #0c102d;
+  border-radius: 18px;
+  padding: 2rem 2.3rem;
+  text-align: left;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.timeline-card.is-changing {
+  opacity: 0.35;
+  transform: translateY(10px);
+}
+
+.timeline-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fc6b06;
+  font-size: 34px;
+  line-height: 1;
+  margin: 0 0 1.2rem 0;
+}
+
+.timeline-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+  margin: 0;
+  color: #0c102d;
+}
+
+.timeline-track-wrap {
+  position: relative;
+  width: 780px;
+  max-width: 88vw;
+  height: 76px;
+  margin: 2.5rem auto 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.28);
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #fc6b06;
+  transition: width 0.25s ease;
+}
+
+.timeline-years {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timeline-tick {
+  position: relative;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.timeline-tick::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.32);
+  margin: 13px auto 10px auto;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-tick.active {
+  color: #fc6b06;
+}
+
+.timeline-tick.active::before {
+  background: #fc6b06;
+  transform: scale(1.35);
+  box-shadow: 0 0 12px rgba(252, 107, 6, 0.75);
+}
+
+.timeline-steps {
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-step {
+  height: 80vh;
+}
+
+.timeline-source {
+  text-align: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin: 2rem auto 0 auto;
 }

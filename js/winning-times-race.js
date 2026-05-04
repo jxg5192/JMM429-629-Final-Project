@@ -232,13 +232,57 @@ async function initWinningTimesRace() {
     valueLabels.exit().remove();
   }
 
-  var frameIndex = 0;
-  update(frames[frameIndex]);
+  // var frameIndex = 0;
+  // update(frames[frameIndex]);
 
-  d3.interval(function() {
+  // d3.interval(function() {
+  //   frameIndex = (frameIndex + 1) % frames.length;
+  //   update(frames[frameIndex]);
+  // }, 1200);
+
+  // FILTERS OPTION
+  var frameIndex = 0;
+var isAutoplay = true;
+
+update(frames[frameIndex]);
+
+var yearSelect = document.querySelector("#year-select");
+
+if (yearSelect) {
+  years.forEach(function(year) {
+    var option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    yearSelect.appendChild(option);
+  });
+
+  yearSelect.addEventListener("change", function() {
+    if (this.value === "autoplay") {
+      isAutoplay = true;
+    } else {
+      isAutoplay = false;
+
+      var selectedYear = Number(this.value);
+
+      frameIndex = years.indexOf(selectedYear);
+
+      if (frameIndex !== -1) {
+        update(frames[frameIndex]);
+      }
+    }
+  });
+}
+
+d3.interval(function() {
+  if (isAutoplay) {
     frameIndex = (frameIndex + 1) % frames.length;
     update(frames[frameIndex]);
-  }, 1200);
+
+    if (yearSelect) {
+      yearSelect.value = "autoplay";
+    }
+  }
+}, 1200);
 }
 
 // wait until the section scrolls into view, then load the chart once
