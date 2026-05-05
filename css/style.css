@@ -98,12 +98,9 @@ letter-spacing:2px;
 }
 
 
-/* ---------------- FUN FACTS PAGE ---------------- */
+/* ---------------- FAST FACTS PAGE ---------------- */
 
 .fun-facts {
-  /* background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-    #050505; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +127,6 @@ letter-spacing:2px;
 
 .facts-sub-title {
   font-family: 'Barlow Condensed', sans-serif;
-  /* color: #ff2232; */
   color: #fc6b06; 
   letter-spacing: 4px;
   font-size: 18px;
@@ -650,7 +646,7 @@ letter-spacing:2px;
 
 
 .record-time {
-    font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   line-height: 0.95;
   color: white; 
   margin: 0;
@@ -666,14 +662,7 @@ letter-spacing:2px;
 margin-top: 2rem;
   text-transform: uppercase;
 
-  /* margin-top: 2rem;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 1;
-  font-weight: 700;
-  color: #fc6b06;
-  letter-spacing: 3px;
-  text-transform: uppercase; */
+ 
 }
 
 .record-sub {
@@ -782,9 +771,8 @@ margin-top: 2rem;
 
 
 
-/* MARATHON TIMELINE STYLING */
-/* ---------------- TIMELINE SECTION ---------------- */
-/* ---------------- TIMELINE SECTION ---------------- */
+/* MARATHON TIMELINE  */
+
 
 .timeline-section {
   min-height: 100vh;
