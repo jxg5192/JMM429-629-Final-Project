@@ -39,6 +39,27 @@ function initBoroughMap() {
         return pathGenerator(d);
       });
 
+
+    // adding borough names
+    svg.selectAll(".map-label")
+  .data(geoData.features)
+  .enter()
+  .append("text")
+  .attr("class", "map-label")
+  .attr("x", function(d) {
+    return pathGenerator.centroid(d)[0];
+  })
+  .attr("y", function(d) {
+    return pathGenerator.centroid(d)[1];
+  })
+  .text(function(d) {
+    return d.properties.boro_name.toUpperCase();
+  });
+  // done
+
+ 
+
+  
     function clearMapHighlight() {
       svg.selectAll(".map-borough").classed("active", false);
     }
